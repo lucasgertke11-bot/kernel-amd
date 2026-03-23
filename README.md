@@ -1,58 +1,37 @@
-# Kernel AMD - Driver de Vídeo
+# Kernel AMD - DistroForge Studio
 
-Repositório contendo kernels Linux compilados com driver AMD para múltiplas distribuições.
+Repositório de kernels Linux com driver AMD para múltiplas distribuições.
 
 ## Objetivo
 
-Este projeto faz parte do **DistroForge Studio**, uma iniciativa para manter um banco de kernels atualizados e otimizados para sistemas com placas de vídeo AMD. O objetivo principal é fornecer kernels pré-compilados que possam ser utilizados pelo instalador Calamares nas distribuições criadas pelo projeto.
+Manter um banco de dados atualizado de kernels Linux para o projeto **DistroForge Studio**, dedicado à criação de distribuições Linux personalizadas com foco em suporte otimizado para hardware AMD.
 
-## Especificações
-
-- **Driver de Vídeo:** AMD (Kernel Linux com drivers AMD pré-instalados)
-- **Arquitetura:** amd64 (x86_64)
-
-## Distribuições Suportadas
+## Distribuições Incluídas
 
 | Distribuição | Pasta |
 |--------------|-------|
 | Arch Linux | `arch/` |
 | Debian | `debian/` |
 | Fedora | `fedora/` |
-| Gentoo | `gentoo/` |
-| openSUSE | `opensuse/` |
-| Ubuntu | `ubuntu/` |
 
 ## Instalação
 
-Os arquivos estão no formato `.tar.gz` e podem ser extraitos diretamente para o diretório de kernels do seu sistema.
+Os kernels estão no formato `.tar.gz` prontos para uso com o instalador Calamares.
 
 ```bash
-# Exemplo para Ubuntu
-tar -xzvf ubuntu/linux-ubuntu-hwe-6.12.tar.gz -C /caminho/para/kernels/
+tar -xzvf linux-<distro>-<versao>.tar.gz -C /caminho/para/kernels/
 ```
 
-## Download
+## Especificações
 
-O arquivo completo foi dividido em partes devido à limitação de tamanho do GitHub:
-
-- `kernels-amd-part-aa` (parte 1)
-- `kernels-amd-part-ab` ( parte 2)
-
-Para recombinar e extrair:
-
-```bash
-cat kernels-amd-part-* > kernels-amd.tar.bz2
-tar -xjf kernels-amd.tar.bz2
-```
+- **Driver:** AMD (pré-configurado)
+- **Arquitetura:** amd64 (x86_64)
+- **Formato:** `.tar.gz` (compatível com Calamares)
 
 ## Sobre o Projeto
 
-**DistroForge Studio** é um projeto dedicado à criação de distribuições Linux personalizadas, com foco em:
-
-- Kernels atualizados
-- Suporte otimizado para hardware AMD
-- Integração com Calamares para instalação facilitada
+**DistroForge Studio** é uma iniciativa para fornecer distribuições Linux atualizadas com kernels otimizados para hardware AMD.
 
 ## Licença
 
-Consulte o arquivo LICENSE para mais informações.
+Consulte o arquivo LICENSE.
